@@ -1,4 +1,5 @@
-
+![Title - Google Chrome 24-05-2024 21_02_48](https://github.com/user-attachments/assets/9ae14734-61dd-4640-a6b8-4375a5af39a8)
+![Title - Google Chrome 24-05-2024 21_02_56](https://github.com/user-attachments/assets/72ae360d-9713-415b-af15-2bfabedb26e9)
 
 
 # COVID-ML-Prediction
