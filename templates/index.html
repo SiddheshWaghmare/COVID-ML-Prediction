@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Covid-19 Detection</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+        body {
+            background-color: #001d53;
+            color: white !important;
+        }
+
+        h1, h2 {
+            font-family: "Mulish", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 50px;
+        }
+
+        nav {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .card {
+            border: 2px solid black;
+        }
+
+        .icon-link {
+            padding-left: 20px;
+        }
+
+        .icon-link :hover {
+            fill: #0d6efd;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            padding: 0px 20px;
+        }
+
+        .navbar-nav .nav-item.active .nav-link,
+        .navbar-nav .nav-item:hover .nav-link {
+            color: #0d6efd;
+        }
+
+        .container {
+            margin-top: 20px;
+            width: 1000px;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: #05389856;
+        }
+
+        .me-3 {
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: #5255ff;
+            border: 2px solid black;
+            padding: 10px;
+            width: 200rem;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .me-3 a {
+            font-size: 25px;
+        }
+
+        .me-3 p {
+            display: inline-block;
+        }
+
+        .me-3:hover p {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1>Covid-19 Detection</h1>
+                    <form action="/predict" method="post" enctype="multipart/form-data" class="mb-3">
+                        <div class="mb-3">
+                            <input type="file" name="file" accept="image/*" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                    </form>
+                    <div id="prediction-result">
+                        {% if prediction_result %}
+                            <h4>Prediction Result:</h4>
+                            <h2>{{ prediction_result }}</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
